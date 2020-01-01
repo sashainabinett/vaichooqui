@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://ohqueekeek.0xfire.me/sitemap.xml
